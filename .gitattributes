@@ -1,0 +1,19 @@
+# Автоопределение текстовых файлов, нормализация к LF в репозитории
+* text=auto eol=lf
+
+# Скрипты, которые обязаны иметь LF (иначе ломаются на Unix)
+gradlew text eol=lf
+*.sh text eol=lf
+
+# Windows-скрипты — обязаны иметь CRLF
+*.bat text eol=crlf
+gradlew.bat text eol=crlf
+
+# Бинарные файлы — git не трогает окончания строк
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.jks binary
+*.keystore binary
+*.jar binary
