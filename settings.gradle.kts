@@ -24,4 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "FormulaInput"
 include(":app")
- 
+include(":formulas")
