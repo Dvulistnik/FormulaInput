@@ -11,3 +11,11 @@ kotlin {
         jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
     }
 }
+dependencies {
+    testImplementation(libs.junit5.jupiter)
+    testImplementation(libs.kotest.assertions.core)
+    testRuntimeOnly(libs.junit5.platform.launcher)
+}
+tasks.test {
+    useJUnitPlatform()
+}
